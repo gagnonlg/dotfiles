@@ -1,0 +1,11 @@
+(display-time-mode)
+(setq display-time-24hr-format t)
+(global-set-key "\C-ca" 'org-agenda)
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-9"))
+(set-scroll-bar-mode nil)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(global-set-key "\C-cc" 'org-capture)
+(put 'set-goal-column 'disabled nil)
+(global-set-key (kbd "C-é") 'undo) ;; corresponding key on french keyboard
+(load-file "~/plan/org-mode-config.el")
