@@ -9,3 +9,5 @@
 (put 'set-goal-column 'disabled nil)
 (global-set-key (kbd "C-é") 'undo) ;; corresponding key on french keyboard
 (load-file "~/plan/org-mode-config.el")
+(load "auctex.el" nil t t)
+(setq doc-view-resolution 300)
