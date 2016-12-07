@@ -13,5 +13,7 @@ fi
 
 setxkbmap -ca
 
+dwmstatus &
+
 ssh-agent dwm
 #ssh-agent gnome-session
