@@ -1,0 +1,21 @@
+! set $TERM explicitly
+xterm*termName: xterm-256color
+
+! ensure locale settings are correct for UTF-8
+xterm*locale: true
+
+! fix backspace in tty
+xterm*backarrowKey: false
+xterm*ttyModes: erase ^?
+
+! paste to clipboard instead of primary selection
+xterm*selectToClipboard: true
+
+! white text on black background
+xterm*reverseVideo: on
+
+! same font as emacs
+xterm*faceName: DejaVu Sans Mono:size=9
+
+! remove all borders
+xterm*borderWidth: 0
