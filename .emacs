@@ -11,3 +11,4 @@
 (load-file "~/plan/org-mode-config.el")
 (load "auctex.el" nil t t)
 (setq doc-view-resolution 300)
+(setq c-default-style '((other . "linux")))
