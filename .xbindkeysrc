@@ -1,0 +1,13 @@
+# volume control
+"pamixer --increase 5"
+    Mod4 + equal
+"pamixer --increase 5"
+    XF86AudioRaiseVolume
+"pamixer --decrease 5"
+    Mod4 + minus
+"pamixer --decrease 5"
+    XF86AudioLowerVolume
+"pamixer --toggle-mute"
+    Mod4 + BackSpace
+"pamixer --toggle-mute"
+    Mod4 + BackSpace
