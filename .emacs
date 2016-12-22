@@ -11,3 +11,19 @@
 (load-file "~/plan/org-mode-config.el")
 (load "auctex.el" nil t t)
 (setq doc-view-resolution 300)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Hook pour les modes de programmation
+(defun common-programming-hook ()
+  (linum-mode)
+  (hl-line-mode)
+  (setq indicate-buffer-boundaries 'right)
+  (setq show-trailing-whitespace t))
+(add-hook 'emacs-lisp-mode-hook 'common-programming-hook)
+(add-hook 'c-mode-common-hook 'common-programming-hook)
+(setq c-basic-offset 8)
+(setq c-default-style "linux")
+(add-hook 'c++-mode-common-hook 'common-programming-hook)
+(setq c++-default-style "stroustrup")
+(add-hook 'python-mode-hook 'common-programming-hook)
+(setq python-indent-offset 4)
