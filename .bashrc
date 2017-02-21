@@ -8,6 +8,7 @@
 ## environment variables
 
 export EDITOR=emacs
+export PATH=~/.local/bin:$PATH
 
 ## aliases
 
