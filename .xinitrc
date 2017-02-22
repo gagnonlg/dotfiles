@@ -17,5 +17,8 @@ setxkbmap -ca
 
 dwmstatus &
 
+xbindkeys
+emacs --daemon
+
 ssh-agent dwm
 #ssh-agent gnome-session
