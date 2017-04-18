@@ -8,7 +8,7 @@
 ## environment variables
 
 export EDITOR=emacs
-export PATH=~/.local/bin:$PATH
+export PATH=~/bin:~/bin/scripts:~/.local/bin:$PATH
 export PS1='[$?] ($(hostname)) $(basename $PWD)/ $ '
 
 ## aliases
