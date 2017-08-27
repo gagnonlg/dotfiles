@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ "$@" = "" ]]; then
+    list=(bashrc bash_profile xbindkeysrc xinitrc Xresources)
+else
+    list=($@)
+fi
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+for cmd in "${list[@]}"; do
+    [[ -e $HOME/.$cmd ]] && mv -v $HOME/.$cmd{,.bak}
+    ln -sv $DIR/$cmd $HOME/.$cmd
+done
