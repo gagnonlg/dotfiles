@@ -1,4 +1,4 @@
-#
+# -*- mode: sh -*-
 # ~/.bashrc
 #
 
@@ -15,7 +15,7 @@ shopt -q checkwinsize
 ## environment variables
 
 EDITOR="emacs"
-export PATH=~/bin:~/.local/bin:$PATH
+PATH=~/bin:~/.local/bin:$PATH
 PS1='[$?] ($(hostname)) $(basename $PWD)/ $ '
 TERM=xterm-256color
 
@@ -41,6 +41,7 @@ fi
 
 # on lps
 if [[ $(hostname) =~ atlas[0-9][0-9]\.lps\.umontreal\.ca ]]; then
+    unset PROMPT_COMMAND
     EDITOR="emacs -nw"
     GIT_SSL_NO_VERIFY=true
     PATH=~/local/bin:$PATH
@@ -71,13 +72,15 @@ if [[ $(hostname) =~ atlas[0-9][0-9]\.lps\.umontreal\.ca ]]; then
 	done
     }
 
+    set +o allexport
     [[ -f /usr/local/bin/texlive2015.sh ]] && . /usr/local/bin/texlive2015.sh
+    set -o allexport
 
 fi
 
 # on hades
 if [ "$(hostname)" = "hades" ]; then
-    export PATH="/RQusagers/lgagnon/anaconda2/bin:$PATH"
+    PATH="/RQusagers/lgagnon/anaconda2/bin:$PATH"
 fi
 
 # on lxplus
