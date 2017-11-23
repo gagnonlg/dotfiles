@@ -2,8 +2,14 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# If not running interactively
+if [[ $- != *i* ]]; then
+    if [[ $(hostname) =~ atlas[0-9][0-9]\.lps\.umontreal\.ca ]]; then
+	export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+    fi
+    return;
+fi
+
 # Source global definitions
 [[ -f /etc/bashrc ]] && . /etc/bashrc
 
