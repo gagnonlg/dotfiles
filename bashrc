@@ -48,6 +48,7 @@ fi
 
 # on lps
 if [[ $(hostname) =~ atlas[0-9][0-9]\.lps\.umontreal\.ca ]]; then
+    alias git='git --no-pager'
     unset PROMPT_COMMAND
     EDITOR="emacs -nw"
     GIT_SSL_NO_VERIFY=true
