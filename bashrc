@@ -36,6 +36,7 @@ alias root='root -l'
 
 # running inside emacs
 if [ "$INSIDE_EMACS" != "" ]; then
+    TERM=dumb
     alias git='git --no-pager'
 fi
 
