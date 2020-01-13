@@ -27,6 +27,8 @@ TERM=xterm-256color
 
 ## aliases
 
+alias gdb='gdb --silent'
+alias next='clear; task next'
 alias ls='ls --color=auto'
 alias rm='rm -i'
 alias root='root -l'

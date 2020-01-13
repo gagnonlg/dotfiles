@@ -1,2 +1,14 @@
 "emacsclient -c -e '(shell)' -e '(delete-other-windows)'"
     Mod4 + equal
+"emacsclient -c -e '(org-capture nil \"t\")"
+    Mod4 + minus
+"pactl set-sink-volume 0 +5%"
+    XF86AudioRaiseVolume
+"pactl set-sink-volume 0 -5%"
+    XF86AudioLowerVolume
+"pactl set-sink-mute 0 toggle"
+    XF86AudioMute    
+"xbacklight -inc 10"
+    XF86MonBrightnessUp
+"xbacklight -dec 10"
+    XF86MonBrightnessDown

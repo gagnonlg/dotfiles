@@ -13,12 +13,9 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-setxkbmap -ca
-
-dwmstatus &
-
 xbindkeys
-emacs --daemon
 
-ssh-agent dwm
-#ssh-agent gnome-session
+ssh-agent sh -c "emacs --daemon & awesome"
+
+
+

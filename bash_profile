@@ -1,6 +1,7 @@
 #
 # ~/.bash_profile
 #
+# -*- mode: sh -*-
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
